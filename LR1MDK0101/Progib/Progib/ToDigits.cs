@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Progib
 {
-    class task1
+    class ToDigits
     {
-        
-       
-        public static int DigitsSum(int[] digits)
+        public static int[] NumberToDigits(int number)
         {
-            int sum = 0;
+            int[] digits = new int[number.ToString().Length];
+
             for (int i = 0; i < digits.Length; i++)
             {
-                sum += digits[i];
+                digits[i] = number % 10;
+                number = number / 10;
             }
-            return sum;
+            return digits;
         }
     }
 }
