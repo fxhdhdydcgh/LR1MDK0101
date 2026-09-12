@@ -11,30 +11,8 @@ namespace Progib
        
         static void Main(string[] args)
         {
-            Console.WriteLine(DigitsSum(NumberToDigits(NumbersInput())));
+            Console.WriteLine(task1.DigitsSum(task1.NumberToDigits(task1.NumbersInput())));
         }
-       private static int NumbersInput()
-        {
-            Console.WriteLine("Введите число");
-            return Convert.ToInt32(Console.ReadLine());
-        }
-        private static int[] NumberToDigits(int number)
-        {
-            int[] digits = new int[number.ToString().Length-1];
-            for (int i = 0; i < number.ToString().Length-1; i++)
-            {
-                digits[i] = number % 10;
-            }
-            return digits;
-        }
-        private static int DigitsSum(int[] digits)
-        {
-            int sum = 0;
-            for (int i = 0; i < digits.Length-1; i++)
-            {
-                sum += digits[i];
-            }
-            return sum;
-        }
+       
     }
 }
