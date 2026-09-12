@@ -12,6 +12,7 @@ namespace Progib
         static void Main(string[] args)
         {
             Console.WriteLine(task1.DigitsSum(ToDigits.NumberToDigits(InputModule.NumbersInput())));
+            Console.WriteLine(InvertModule.InvertNumber(ToDigits.NumberToDigits(InputModule.NumbersInput())));
         }
        
     }
