@@ -8,8 +8,15 @@ namespace Progib
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
+
+        }
+       private int NumbersInput()
+        {
+            Console.WriteLine("Введите число");
+            return Convert.ToInt32(Console.ReadLine());
         }
     }
 }
