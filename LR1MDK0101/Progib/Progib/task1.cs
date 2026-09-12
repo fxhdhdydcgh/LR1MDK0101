@@ -15,17 +15,19 @@ namespace Progib
         }
         public static int[] NumberToDigits(int number)
         {
-            int[] digits = new int[number.ToString().Length - 1];
-            for (int i = 0; i < number.ToString().Length - 1; i++)
+            int[] digits = new int[number.ToString().Length];
+            
+            for (int i = 0; i < digits.Length; i++)
             {
                 digits[i] = number % 10;
+                number = number / 10;
             }
             return digits;
         }
         public static int DigitsSum(int[] digits)
         {
             int sum = 0;
-            for (int i = 0; i < digits.Length - 1; i++)
+            for (int i = 0; i < digits.Length; i++)
             {
                 sum += digits[i];
             }
