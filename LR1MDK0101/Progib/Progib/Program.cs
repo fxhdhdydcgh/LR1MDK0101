@@ -11,26 +11,26 @@ namespace Progib
        
         static void Main(string[] args)
         {
-
+            Console.WriteLine(DigitsSum(NumberToDigits(NumbersInput())));
         }
-       private int NumbersInput()
+       private static int NumbersInput()
         {
             Console.WriteLine("Введите число");
             return Convert.ToInt32(Console.ReadLine());
         }
-        private int[] NumberToDigits(int number)
+        private static int[] NumberToDigits(int number)
         {
-            int[] digits = { };
-            for (int i = 0; i < number.ToString().Length; i++)
+            int[] digits = new int[number.ToString().Length-1];
+            for (int i = 0; i < number.ToString().Length-1; i++)
             {
-                digits[i] = number / 10;
+                digits[i] = number % 10;
             }
             return digits;
         }
-        private int DigitsSum(int[] digits)
+        private static int DigitsSum(int[] digits)
         {
             int sum = 0;
-            for (int i = 0; i < digits.Length; i++)
+            for (int i = 0; i < digits.Length-1; i++)
             {
                 sum += digits[i];
             }
