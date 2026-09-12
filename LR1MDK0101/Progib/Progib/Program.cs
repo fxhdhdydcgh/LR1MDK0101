@@ -27,5 +27,14 @@ namespace Progib
             }
             return digits;
         }
+        private int DigitsSum(int[] digits)
+        {
+            int sum = 0;
+            for (int i = 0; i < digits.Length; i++)
+            {
+                sum += digits[i];
+            }
+            return sum;
+        }
     }
 }
