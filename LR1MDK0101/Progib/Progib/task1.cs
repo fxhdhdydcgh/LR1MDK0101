@@ -8,11 +8,7 @@ namespace Progib
 {
     class task1
     {
-        public static int NumbersInput()
-        {
-            Console.WriteLine("Введите число");
-            return Convert.ToInt32(Console.ReadLine());
-        }
+        
         public static int[] NumberToDigits(int number)
         {
             int[] digits = new int[number.ToString().Length];
