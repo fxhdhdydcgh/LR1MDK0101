@@ -18,5 +18,14 @@ namespace Progib
             Console.WriteLine("Введите число");
             return Convert.ToInt32(Console.ReadLine());
         }
+        private int[] NumberToDigits(int number)
+        {
+            int[] digits = { };
+            for (int i = 0; i < number.ToString().Length; i++)
+            {
+                digits[i] = number / 10;
+            }
+            return digits;
+        }
     }
 }
