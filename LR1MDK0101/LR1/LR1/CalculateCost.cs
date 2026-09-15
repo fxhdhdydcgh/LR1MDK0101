@@ -19,6 +19,6 @@ namespace LR1
             finalCost = (time >= 12 && time <= 14 || time >= 18 && time <= 20) ? finalCost * 1.3f : finalCost;
             return finalCost;
         }
-       
+       public static float CalculateTotal(float deliveryCost, int orderCost) => deliveryCost + orderCost;
     }
 }
