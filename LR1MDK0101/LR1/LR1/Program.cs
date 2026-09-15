@@ -10,6 +10,7 @@ namespace LR1
     {
         static void Main(string[] args)
         {
+            Task1.TaskStart();
         }
     }
 }
