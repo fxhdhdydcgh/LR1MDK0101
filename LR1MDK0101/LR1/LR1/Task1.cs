@@ -10,9 +10,9 @@ namespace LR1
     {
         public static void TaskStart()
         {
-            int orderCost = InputNumber.Input("стоимость заказа");
-            int distance = InputNumber.Input("расстояние доставки");
-            int time = InputNumber.Input("время заказа");
+            int orderCost = InputNumber.Input("стоимость заказа (руб.)");
+            int distance = InputNumber.Input("расстояние доставки (км)");
+            int time = InputNumber.Input("время заказа (час)");
             float deliveryCost = CalculateCost.CalculateDelivery(orderCost, distance, time);
             Console.WriteLine("Стоимость доставки: " + deliveryCost);
             Console.WriteLine("Итого к оплате: " + CalculateCost.CalculateTotal(deliveryCost, orderCost));
