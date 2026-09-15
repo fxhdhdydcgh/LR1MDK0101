@@ -15,7 +15,7 @@ namespace LR1
             if (orderSum >= 2000) return 0;
             int baseCost = 150;
             float finalCost = 0;
-            finalCost = distanceKm > 3 ? baseCost * (distanceKm - 3) : baseCost;
+            finalCost = distanceKm > 3 ? baseCost + 50 * (distanceKm - 3) : baseCost;
             finalCost = (time >= 12 && time <= 14 || time >= 18 && time <= 20) ? finalCost * 1.3f : finalCost;
             return finalCost;
         }
